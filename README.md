@@ -1,10 +1,16 @@
 # PA Portfolio
 
-A responsive, dependency-free single-page portfolio built for GitHub Pages.
+A responsive, dependency-free single-page portfolio built for GitHub Pages. It balances strategic design storytelling with contributions and career details grounded in the supplied 2026 resume.
 
 ## Customize
 
-Edit `index.html` to replace the placeholder project descriptions, email address, and social links. Visual styles live in `styles.css`; interactions live in `script.js`.
+Edit `index.html` to update project contributions, career details, and contact links. Visual styles live in `styles.css`; interactions live in `script.js`.
+
+The selected-work diagrams are illustrative, not product screenshots. GenUI is presented as a product for scaling products with Generative UI. Other summaries distinguish concept exploration from research and design contributions; they do not claim unverified shipping status or outcome metrics. Add approved product artifacts and verified results when available.
+
+The page pairs AI work (Generative UI and Copilot) with discovery and research work (Windows Spotlight, Trivia, and Bing Travel). Design leadership is framed as collaboration and influence, not an assertion of people-management responsibility. Earlier career details are available in a native, keyboard-accessible disclosure.
+
+The resume download uses `Prakash Arjunan Resume 2026.docx` in the site root. Include this file when deploying, or update both download links if replacing it with a public PDF. Review the resume's contact details before publishing the document.
 
 ## Preview locally
 

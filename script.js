@@ -1,6 +1,11 @@
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.site-nav');
 
+const closeNavigation = () => {
+  menuButton?.setAttribute('aria-expanded', 'false');
+  navigation?.classList.remove('is-open');
+};
+
 menuButton?.addEventListener('click', () => {
   const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
   menuButton.setAttribute('aria-expanded', String(!isOpen));
@@ -9,10 +14,18 @@ menuButton?.addEventListener('click', () => {
 
 navigation?.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
-    menuButton?.setAttribute('aria-expanded', 'false');
-    navigation.classList.remove('is-open');
+    closeNavigation();
   });
 });
+
+document.addEventListener('keydown', (event) => {
+  if (event.key !== 'Escape' || menuButton?.getAttribute('aria-expanded') !== 'true') return;
+  closeNavigation();
+  menuButton.focus();
+});
+
+const mobileNavigationQuery = window.matchMedia('(max-width: 700px)');
+mobileNavigationQuery.addEventListener('change', closeNavigation);
 
 const revealObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
